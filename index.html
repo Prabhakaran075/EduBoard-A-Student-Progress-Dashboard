@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduBoard – Student Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar">
+    <h2 class="logo">EduBoard</h2>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+      <li><a href="subjects.html"><i class="fa-solid fa-book"></i> Subjects</a></li>
+      <li><a href="attendance.html"><i class="fa-solid fa-calendar-check"></i> Attendance</a></li>
+      <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+      <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Layout -->
+  <div class="main-content">
+    <!-- Header -->
+    <header class="topbar">
+      <div class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+      <div class="profile-section">
+        <i class="fa-solid fa-bell"></i>
+        <img src="https://via.placeholder.com/40" alt="Student Avatar" class="avatar">
+        <span class="student-name">Prabhakaran</span>
+      </div>
+    </header>
+
+    <main>
+      <!-- Student Overview Cards -->
+      <section class="overview">
+        <article class="card">
+          <h3>GPA</h3>
+          <p>3.85</p>
+        </article>
+        <article class="card">
+          <h3>Attendance</h3>
+          <p>92%</p>
+        </article>
+        <article class="card">
+          <h3>Assignments Due</h3>
+          <p>4</p>
+        </article>
+        <article class="card">
+          <h3>Total Credits</h3>
+          <p>120</p>
+        </article>
+      </section>
+
+      <!-- Progress Table -->
+      <section class="progress-section">
+        <h2>Subject Progress</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Completion</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mathematics</td>
+              <td>
+                <div class="progress-bar"><span style="width: 80%"></span></div>
+              </td>
+              <td>80%</td>
+            </tr>
+            <tr>
+              <td>Computer Science</td>
+              <td><div class="progress-bar"><span style="width: 95%"></span></div></td>
+              <td>95%</td>
+            </tr>
+            <tr>
+              <td>Physics</td>
+              <td><div class="progress-bar"><span style="width: 70%"></span></div></td>
+              <td>70%</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Upcoming Deadlines -->
+      <section class="deadlines">
+        <h2>Upcoming Deadlines</h2>
+        <ul>
+          <li><span class="date-badge" style="padding-bottom: 1px;text-align: center;">Nov 12</span> Assignment – Web Development</li>
+          <li><span class="date-badge" style="padding-bottom: 1px;text-align: center;">Nov 15</span> Quiz – Physics</li>
+          <li><span class="date-badge" style="padding-bottom: 1px;text-align: center;">Nov 20</span> Lab Report – Data Structures</li>
+        </ul>
+      </section>
+
+      <!-- Student Profile -->
+      <section class="profile-card">
+        <h2>Profile Information</h2>
+        <div class="profile-details">
+          <img src="https://via.placeholder.com/80" alt="Student Photo" />
+          <div>
+            <p><strong>Name:</strong> Prabhakaran</p>
+            <p><strong>Roll No:</strong> CS2023-045</p>
+            <p><strong>Email:</strong> prabhakaran@college.edu</p>
+            <p><strong>College:</strong> EduTech University</p>
+            <p><strong>Department:</strong> Computer Science</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    toggle.addEventListener('click', () => sidebar.classList.toggle('active'));
+  </script>
+</body>
+</html>

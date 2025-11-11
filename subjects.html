@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subjects | EduBoard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <nav class="sidebar">
+    <h2 class="logo">EduBoard</h2>
+    <ul class="nav-links">
+      <li><a href="index.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+      <li><a href="subjects.html" class="active"><i class="fa-solid fa-book"></i> Subjects</a></li>
+      <li><a href="attendance.html"><i class="fa-solid fa-calendar-check"></i> Attendance</a></li>
+      <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+      <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-content">
+    <header class="topbar">
+      <div class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+      <div class="profile-section">
+        <i class="fa-solid fa-bell"></i>
+        <img src="https://via.placeholder.com/40" alt="Avatar" class="avatar">
+        <span class="student-name">Prabhakaran</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="subjects-page">
+        <h2>Subjects Overview</h2>
+        <div class="subject-grid">
+          <div class="card"><h3>Mathematics</h3><p>Instructor: Dr. Allen</p></div>
+          <div class="card"><h3>Computer Science</h3><p>Instructor: Prof. Jane</p></div>
+          <div class="card"><h3>Physics</h3><p>Instructor: Mr. Raj</p></div>
+          <div class="card"><h3>English</h3><p>Instructor: Ms. Latha</p></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    toggle.addEventListener('click', () => sidebar.classList.toggle('active'));
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attendance | EduBoard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <nav class="sidebar">
+    <h2 class="logo">EduBoard</h2>
+    <ul class="nav-links">
+      <li><a href="index.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+      <li><a href="subjects.html"><i class="fa-solid fa-book"></i> Subjects</a></li>
+      <li><a href="attendance.html" class="active"><i class="fa-solid fa-calendar-check"></i> Attendance</a></li>
+      <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+      <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-content">
+    <header class="topbar">
+      <div class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+      <div class="profile-section">
+        <i class="fa-solid fa-bell"></i>
+        <img src="https://via.placeholder.com/40" alt="Avatar" class="avatar">
+        <span class="student-name">Prabhakaran</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="attendance-section">
+        <h2>Attendance Record</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Classes Attended</th>
+              <th>Total Classes</th>
+              <th>Percentage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Mathematics</td><td>42</td><td>45</td><td>93%</td></tr>
+            <tr><td>Computer Science</td><td>40</td><td>45</td><td>88%</td></tr>
+            <tr><td>Physics</td><td>43</td><td>45</td><td>95%</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    toggle.addEventListener('click', () => sidebar.classList.toggle('active'));
+  </script>
+</body>
+</html>
